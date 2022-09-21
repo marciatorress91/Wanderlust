@@ -1,4 +1,5 @@
 import './navbar.css';
+import CartWidget from '../CartWidget/CartWidget'
 
 import logo from '../assets/logo.png'
 
@@ -13,19 +14,19 @@ const Navbar = () => {
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link texto" aria-current="page" href="/"><b>Inicio</b></a>
+                <a class="nav-link texto" aria-current="page" href="#"><b>Inicio</b></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link texto" aria-current="page" href="/Quienessomos"><b>Quiénes somos</b></a>
+                <a class="nav-link texto" aria-current="page" href="#"><b>Quiénes somos</b></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link texto" href="/ItemListContainer"><b>Tienda</b></a>
+                <a class="nav-link texto" href="#"><b>Tienda</b></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link texto" href="/Contacto"><b>Contacto</b></a>
+                <a class="nav-link texto" href="#"><b>Contacto</b></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link texto" href="/CartWidget"><b><i class="bi bi-cart-check"></i></b></a>
+                <a class="nav-link texto" href="#"><CartWidget/></a>
                 </li>
             </ul>
             </div>

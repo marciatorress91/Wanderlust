@@ -3,7 +3,7 @@ import './CartWidget.css'
 const CartWidget = () => {
     return(
         <div>
-            CARRITO
+            <i class="bi bi-cart-check"></i>
         </div>
         )
 }

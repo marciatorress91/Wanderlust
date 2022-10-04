@@ -1,32 +1,30 @@
+import React from 'react';
 import './navbar.css';
+import { NavLink, Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
-
 import logo from '../assets/logo.png'
 
 const Navbar = () => {
     return(
-        <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src={logo} className="logo" alt="Logo"/></a>
-            <button class="navbar-toggler boton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+            <Link className="navbar-brand" to={'/'}><img src={logo} alt="logo" width={300}/></Link>
+            <button className="navbar-toggler boton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link texto" aria-current="page" href="#"><b>Inicio</b></a>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                    <NavLink className="nav-link texto" to={'/'}><b>Inicio</b></NavLink>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link texto" aria-current="page" href="#"><b>Quiénes somos</b></a>
+                <li className="nav-item">
+                    <NavLink className="nav-link texto" to={'/tienda/valijas'}><b>Valijas</b></NavLink>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link texto" href="#"><b>Tienda</b></a>
+                <li className="nav-item">
+                    <NavLink className="nav-link texto" to={'/tienda/accesorios'}><b>Accesorios</b></NavLink>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link texto" href="#"><b>Contacto</b></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link texto" href="#"><CartWidget/></a>
+                <li className="nav-item texto">
+                    <CartWidget/>
                 </li>
             </ul>
             </div>

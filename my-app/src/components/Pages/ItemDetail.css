@@ -1,0 +1,36 @@
+.cargando{
+    color:#EFE6DF;
+    background-color: #00c2cb;
+}
+
+.itemContainer{
+    background-color:#EFE6DF ;
+}
+
+.itemMarca{
+    color:#00c2cb;
+    justify-content: center;
+}
+
+.itemModelo{
+    color:#00c2cb;
+    text-align: center;
+    justify-content: center;
+}
+
+.itemPrecio{
+    color:#00c2cb;
+    justify-content: center;
+}
+
+.itemColores{
+    opacity: 1;
+}
+
+.itemColores:hover{
+    opacity:0.8
+}
+
+.hr{
+    color:#00c2cb  
+}

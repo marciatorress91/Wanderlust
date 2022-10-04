@@ -1,0 +1,20 @@
+.boton{
+    color:#EFE6DF;
+    background-color: #00c2cb;
+    border-style: none;
+    opacity:1
+}
+
+.boton:hover{
+    opacity: 0.8;
+}
+
+.boton2{
+    color:#EFE6DF;
+    background-color: #00c2cb;
+    border-style: none;
+}
+
+.numeroArticulos{
+    color: #00c2cb;
+}

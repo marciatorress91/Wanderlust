@@ -1,0 +1,29 @@
+.cartWidget{
+    position: relative;
+}
+
+.numero{
+    background: #00c2cb;
+    font-size: 1rem;
+
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #EFE6DF;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.4em; 
+
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.numero:hover{
+    background-color:#03989e
+}
+

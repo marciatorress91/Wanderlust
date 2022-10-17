@@ -2,6 +2,7 @@ import { useEffect, useState  } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import "./Tienda.css"
 import Item from '../Pages/Item'
+import Cargando from '../cargando/Cargando'
 
 const Tienda = () => {
   const { categoria } = useParams()
@@ -22,7 +23,8 @@ const Tienda = () => {
     <div className='container-fluid itemContainer'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
       {tienda.length == 0 ? 
-        <div className='col mx-auto badge cargando'>CARGANDO...</div>
+        <Cargando/>
+        // <div className='col mx-auto badge cargando'>CARGANDO...</div>
         : tienda.filter( ele => ele.tipo == categoria).map( elefil => (
         <div className='col'>
           <Link className="" to={`/tienda/${categoria}/${elefil.id}`}>

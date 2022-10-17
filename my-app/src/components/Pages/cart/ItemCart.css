@@ -1,0 +1,27 @@
+.botonEliminar{
+    color:#00c2cb;
+    border-style: none;
+    background-color: #EFE6DF;
+    
+}
+
+.botonEliminar:hover{
+    color:#03989e;
+}
+
+.texto1{
+    color:#00c2cb;
+    text-align: center;
+}
+
+.itemCart {
+    display: flex;
+    border-bottom: 1px solid #00c2cb;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+.itemCart img {
+    width: 200px;
+    margin-right: 1rem;
+}

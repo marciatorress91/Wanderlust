@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import Item from './Item'
 import { Link } from 'react-router-dom'
 import './ItemList.css'
+import Cargando from '../cargando/Cargando'
+
 const ItemList = () => {
 
   const[tienda, setTienda] = useState([])
@@ -21,7 +23,7 @@ const ItemList = () => {
     <div className='container'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
       {tienda.length == 0 ? 
-        <div className='col mx-auto badge cargando'>CARGANDO...</div>
+        <Cargando/>
         : tienda.map((ele) => (
         <div className='col'>
           <Link className="" to={`/tienda/${ele.tipo}/${ele.id}`}>

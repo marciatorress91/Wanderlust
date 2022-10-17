@@ -5,10 +5,10 @@ const Item = ({ ele }) => {
   return (
     <div className="container itemCard">
       <div className="itemFoto row">
-        <img className="fotoPrincipal" src={ele.colores[0]} alt='foto principal del elemento'/>
+        <img className="fotoPrincipal" src={ele.foto[0]} alt='foto principal del elemento'/>
       </div>
       <div className="row justify-content-center">
-        {ele.colores.map((color, index) => (
+        {ele.foto.map((color, index) => (
           <img className="itemColores border m-1 col-3" src={color} key={index} alt='opciones de colores de elemento'/>
         ))}
       </div>

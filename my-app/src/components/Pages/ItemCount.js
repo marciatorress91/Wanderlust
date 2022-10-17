@@ -15,12 +15,12 @@ const ItemCount = ({ stock, onAdd }) => {
 
 
   const handleCarrito = () => {
-    stock >= cantidad && onAdd ( stock, cantidad )
+    (stock >= cantidad && cantidad>0) && onAdd ( stock, cantidad )
   }
  
 
   return (
-    <div className='container text-center'>       
+    <div>       
       <div className='row justify-content-center'>     
         <button className='badge fs-5 col-2 px-3 boton' onClick={handleMenos}>-</button>
         <div className='col-3 align-middle numeroArticulos'>{cantidad}</div>
@@ -28,9 +28,6 @@ const ItemCount = ({ stock, onAdd }) => {
       </div>   
       <div className='row justify-content-center py-1'>
         <button className='badge col-7 fs-6 mx-auto boton' onClick={handleCarrito}>Agregar al carrito</button>
-      </div>
-      <div className='row justify-content-center'>
-          <p className='col-7 badge text-end boton2'>Stock: {stock}</p>
       </div>
     </div>
   )

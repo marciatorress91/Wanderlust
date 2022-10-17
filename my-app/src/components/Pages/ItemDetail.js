@@ -1,18 +1,20 @@
-import { useState, useEffect } from "react"
-
-import React from 'react'
+import { useState, useEffect, useContext } from "react"
 import ItemCount from "./ItemCount"
-import { useParams } from "react-router-dom"
 import './ItemDetail.css'
+import { Link } from 'react-router-dom'
+import Cargando from '../cargando/Cargando'
+import {CartContext} from '../contexts/CartContext'
 
-const ItemDetail = () => {
-  const { categoria, modelo } = useParams()
+const ItemDetail = ({id}) => {
+
+  const {carrito, addItem}=useContext(CartContext)
 
   const [stock, setStock] = useState(20)
-  const [ele, setEle] = useState(0)
+  const [item, setItem] = useState(0)
 
   const modificoStock = (stockInicial, cantidad) => {
     setStock(stockInicial - cantidad)
+    addItem([item.id, item.modelo, item.precio, cantidad, item.foto])
   }
   
   useEffect(() => {
@@ -20,33 +22,42 @@ const ItemDetail = () => {
     .then((response) => response.json())
     .then((data) => {
       setTimeout(() =>  {   // simulo retardo de 1s en respuesta
-        setEle(data.filter( elem => elem.id == modelo)[0])
-      } ,1000)
+        setItem(data.filter( elem => elem.id == id)[0])
+      } ,2000)
     })
   }, [])
 
 
   return (
     <div className='container-fluid border itemContainer'>
-    {ele == 0 ?
-      <div className='col mx-auto badge cargando'>CARGANDO...</div>:
+    {!item ?
+      <Cargando/>
+      :
       <div className='row row-cols-1 row-cols-xl-2'> 
         <div className='col fotoPrincipal'>
-          <img className="img-fluid" src={ele.colores[0]} alt='foto principal del elemento'/>
+          <img className="img-fluid" src={item.foto[0]} alt='foto principal del elemento'/>
         </div>
         <div className='col detalles'>
-          <div className='row fs-1 text-uppercase fw-bold itemMarca'>{ele.marca}</div>
-          <div className='row text-uppercase fw-bold itemModelo'>{ele.modelo}</div>
-          <div className='row fs-2 fw-bold itemPrecio'>${ele.precio}</div>
+          <div className='row fs-1 text-uppercase fw-bold itemMarca'>{item.marca}</div>
+          <div className='row text-uppercase fw-bold itemModelo'>{item.modelo}</div>
+          <div className='row fs-2 fw-bold itemPrecio'>${item.precio}</div>
           <hr className="hr"></hr>
           <div className='row justify-content-center'>
-            {ele.colores.map((color, index) => (
+            {item.foto.map((color, index) => (
               <img className="itemColores border m-1 col-2" src={color} key={index} alt='opciones de colores de elemento'/>
             ))}
           </div>
           <hr className="hr"></hr>
-          <ItemCount stock = {stock}
-                   onAdd = {modificoStock}/>
+          <div className="container text-center">
+            <ItemCount stock = {stock}
+                    onAdd = {modificoStock}/>
+            <div className='row justify-content-center'>
+            <p className='col-7 badge text-end stock'>Stock: {stock}</p>
+            </div>
+            <Link className="row justify-content-center py-3" to={`/cart`}>
+                <button className='badge col-7 fs-6 mx-auto boton2'>Finalizar compra</button>
+            </Link>
+          </div>
         </div>
       </div>
     }

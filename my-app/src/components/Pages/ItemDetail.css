@@ -34,3 +34,19 @@
 .hr{
     color:#00c2cb  
 }
+
+.boton2{
+    color:#EFE6DF;
+    background-color: #00c2cb;
+    border-style: none;
+}
+
+.boton2:hover{
+    opacity: 0.8;
+}
+
+.stock{
+    color:#EFE6DF;
+    background-color: #00c2cb;
+    border-style: none;
+}

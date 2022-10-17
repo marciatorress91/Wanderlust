@@ -6,11 +6,11 @@
         "stock": 10,
         "stock2": 10
       } ],
-    "colores": [
+    "foto": [
         "https://drive.google.com/uc?id=1C95ILL8qXblCYq9oDSJUK1_CmFb3z-eO&export=download"
     ],
     "marca": "Zenit",
-    "modelo": "New Budapest violeta",
+    "modelo": "Valija New Budapest violeta",
     "precio": "5500"
   },
     
@@ -21,11 +21,11 @@
       "stock": 10,
       "stock2": 10
     } ],
-  "colores": [
+  "foto": [
       "https://drive.google.com/uc?id=17rn878fRupLUbaAzf2FAkRdLgN86mfuU&export=download"
   ],
   "marca": "Zenit",
-  "modelo": "New Budapest azul",
+  "modelo": "Valija New Budapest azul",
   "precio": "5500"
 },
 {
@@ -36,11 +36,11 @@
         "stock": 10,
         "stock2": 10
       } ],
-    "colores": [
+    "foto": [
         "https://drive.google.com/uc?id=18FuxQa3ikOtF9Tlia494BpxT2vs0O-Kt&export=download"
     ],
     "marca": "Zenit",
-    "modelo": "New Budapest rosada",
+    "modelo": "Valija New Budapest rosada",
     "precio": "5500"
   },
 
@@ -51,11 +51,11 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1EGYd7N9BtCCXjYxxX753S8QNDgjNvCf9&export=download"
 ],
 "marca": "Zenit",
-"modelo": "Budapest con codera celeste",
+"modelo": "Valija Budapest con codera celeste",
 "precio": "5700"
 },
 {"id": 5,
@@ -65,11 +65,11 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1xXlMOWTv9Bp5bGCgbK2Hd5LhlyEB2Hyh&export=download"
 ],
 "marca": "Zenit",
-"modelo": "Qatar rosada",
+"modelo": "Valija Qatar rosada",
 "precio": "6000"
 },
 {"id": 6,
@@ -79,11 +79,11 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1sLqv4nk5GW3IWp_ixaHKplLN-uZlJdt9&export=download"
 ],
 "marca": "Zenit",
-"modelo": "Qatar beige",
+"modelo": "Valija Qatar beige",
 "precio": "6000"
 }, 
 {"id": 7,
@@ -93,11 +93,11 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1g3MJtZyRwGibFMZUNGFaVeSyX9pKCqQh&export=download"
 ],
 "marca": "Zenit",
-"modelo": "Qatar verde",
+"modelo": "Valija Qatar verde",
 "precio": "6000"
 },
 {"id": 8,
@@ -107,11 +107,11 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1GuOnwbvvXQmp-qAzvrz6QdU9Q1dcHRHf&export=download"
 ],
 "marca": "Zenit",
-"modelo": "Qatar negra",
+"modelo": "Valija Qatar negra",
 "precio": "6000"
 }, 
 {"id": 9,
@@ -121,7 +121,7 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=107ZVFRmj5aoodNMEq3WbpLF9lXkpU6gm&export=download"
 ],
 "marca": "Trotamundos",
@@ -135,7 +135,7 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1TlXYhKOb9uljc80_vWB3oQLtW2rxKwdC&export=download"
 ],
 "marca": "Trotamundos",
@@ -149,7 +149,7 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1W8Mg0MGCbbSeC3IFEcqhx0okLGhk5mJI&export=download"
 ],
 "marca": "Trotamundos",
@@ -163,7 +163,7 @@
     "stock": 10,
     "stock2": 10
   } ],
-"colores": [
+"foto": [
     "https://drive.google.com/uc?id=1MUvB0sJOVEEr1QDi68tjBNPffgYAboms&export=download"
 ],
 "marca": "Trotamundos",

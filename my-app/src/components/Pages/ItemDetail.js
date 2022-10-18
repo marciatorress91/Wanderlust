@@ -4,6 +4,7 @@ import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import Cargando from '../cargando/Cargando'
 import {CartContext} from '../contexts/CartContext'
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const ItemDetail = ({id}) => {
 
@@ -18,14 +19,26 @@ const ItemDetail = ({id}) => {
   }
   
   useEffect(() => {
-    fetch("/tienda.json") 
-    .then((response) => response.json())
-    .then((data) => {
-      setTimeout(() =>  {   // simulo retardo de 1s en respuesta
-        setItem(data.filter( elem => elem.id == id)[0])
-      } ,2000)
-    })
-  }, [])
+    const db = getFirestore();
+    const itemRef = doc(db, 'items', id);
+    getDoc(itemRef).then((snapshot) =>
+      setItem({ id: snapshot.id, ...snapshot.data() })
+    );
+  }, [id]);
+
+
+// ASI ESTABA ANTES
+
+
+  // useEffect(() => {
+  //   fetch("/tienda.json") 
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     setTimeout(() =>  {   // simulo retardo de 1s en respuesta
+  //       setItem(data.filter( elem => elem.id == id)[0])
+  //     } ,2000)
+  //   })
+  // }, [])
 
 
   return (
@@ -35,7 +48,7 @@ const ItemDetail = ({id}) => {
       :
       <div className='row row-cols-1 row-cols-xl-2'> 
         <div className='col fotoPrincipal'>
-          <img className="img-fluid" src={item.foto[0]} alt='foto principal del elemento'/>
+          <img className="img-fluid" src={item.foto} alt='foto del elemento'/>
         </div>
         <div className='col detalles'>
           <div className='row fs-1 text-uppercase fw-bold itemMarca'>{item.marca}</div>
@@ -43,9 +56,7 @@ const ItemDetail = ({id}) => {
           <div className='row fs-2 fw-bold itemPrecio'>${item.precio}</div>
           <hr className="hr"></hr>
           <div className='row justify-content-center'>
-            {item.foto.map((color, index) => (
-              <img className="itemColores border m-1 col-2" src={color} key={index} alt='opciones de colores de elemento'/>
-            ))}
+            <img className="itemColores border m-1 col-2" src={item.foto} alt='miniatura de foto'/>
           </div>
           <hr className="hr"></hr>
           <div className="container text-center">

@@ -11,41 +11,38 @@ const ItemDetail = ({id}) => {
   const {carrito, addItem}=useContext(CartContext)
 
   const [stock, setStock] = useState(20)
-  const [item, setItem] = useState(0)
+  
 
   const modificoStock = (stockInicial, cantidad) => {
     setStock(stockInicial - cantidad)
     addItem([item.id, item.modelo, item.precio, cantidad, item.foto])
   }
   
-  useEffect(() => {
-    const db = getFirestore();
-    const itemRef = doc(db, 'items', id);
-    getDoc(itemRef).then((snapshot) =>
-      setItem({ id: snapshot.id, ...snapshot.data() })
-    );
-  }, [id]);
+  // useEffect(() => {
+  //   const db = getFirestore();
+  //   const itemRef = doc(db, 'items', id);
+  //   getDoc(itemRef).then((snapshot) =>
+  //     setItem({ id: snapshot.id, ...snapshot.data() })
+  //   );
+  // }, [id]);
 
 
 // ASI ESTABA ANTES
 
 
-  // useEffect(() => {
-  //   fetch("/tienda.json") 
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     setTimeout(() =>  {   // simulo retardo de 1s en respuesta
-  //       setItem(data.filter( elem => elem.id == id)[0])
-  //     } ,2000)
-  //   })
-  // }, [])
+  useEffect(() => {
+    fetch("/tienda.json") 
+    .then((response) => response.json())
+    .then((data) => {
+      setTimeout(() =>  {   // simulo retardo de 1s en respuesta
+        setItem(data.filter( elem => elem.id == id)[0])
+      } ,2000)
+    })
+  }, [])
 
 
   return (
     <div className='container-fluid border itemContainer'>
-    {!item ?
-      <Cargando/>
-      :
       <div className='row row-cols-1 row-cols-xl-2'> 
         <div className='col fotoPrincipal'>
           <img className="img-fluid" src={item.foto} alt='foto del elemento'/>
@@ -71,7 +68,6 @@ const ItemDetail = ({id}) => {
           </div>
         </div>
       </div>
-    }
     </div>
   )
 }

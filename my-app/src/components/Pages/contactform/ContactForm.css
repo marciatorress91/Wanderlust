@@ -1,0 +1,45 @@
+.itemContainer{
+    background-color:#EFE6DF ;
+}
+
+.boton3{
+    color:#00c2cb;
+    background-color: #EFE6DF;
+    border-style: none;
+}
+
+.boton3:hover{
+    opacity:0.9
+}
+
+.cart{
+    color:#00c2cb;
+    background-color: #EFE6DF;
+    text-align: center;
+}
+
+.texto2{
+    color:#EFE6DF;
+}
+
+
+.form{
+    background-color: #00c2cb;
+    border-radius: 1rem;
+    width: 70%;
+}
+
+.gracias{
+    color:#EFE6DF;;
+    text-align: center;
+}
+
+.avion{
+    color: #EFE6DF;
+}
+
+.contenedorGracias{
+    background-color: #00c2cb;
+    border-radius: 1rem;
+    width: 50%;
+}

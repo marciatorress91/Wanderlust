@@ -1,0 +1,25 @@
+.saludo{
+    color: #EFE6DF;
+    background-color: #00c2cb;
+    border-style: none;
+    opacity: 0.8;
+}
+
+.saludo:hover{
+    background-color: #00c2cb;
+    color: #EFE6DF;
+    opacity: 1;
+}
+
+.avion{
+    color: #EFE6DF;
+}
+
+.itemContainer{
+    background-color:#EFE6DF ;
+}
+
+.cargando{
+    color:#EFE6DF;
+    background-color: #00c2cb;
+}

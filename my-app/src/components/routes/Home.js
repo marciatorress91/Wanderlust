@@ -1,4 +1,4 @@
-import ItemListContainer from '../Pages/ItemListContainer'
+import ItemListContainer from '../Pages/list/ItemListContainer'
 import './Home.css'
 
 const Home = () => {

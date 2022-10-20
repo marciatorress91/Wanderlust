@@ -24,13 +24,6 @@ const addItem = (item) => {
 }
 
 
-
-  console.log(carrito) /* BORRAAAAAR */
-
-
-
-
-
     const removerItem=(id)=>{
         setCarrito(carrito.filter(ele=>ele.id!==id))
     }

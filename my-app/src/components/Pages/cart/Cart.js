@@ -3,6 +3,7 @@ import {CartContext} from '../../contexts/CartContext'
 import { useContext } from "react"
 import { Link } from 'react-router-dom'
 import ItemCart from './ItemCart'
+import ContactForm from '../contactform/ContactForm'
 
 const Cart =()=>{
     const {carrito, vaciarCarrito, precioTotal}=useContext(CartContext)
@@ -13,7 +14,7 @@ const Cart =()=>{
         {carrito.length ===0 ?
         <div>
           <p className="cart py-5">No hay Items en el carrito</p>
-          <Link className="row justify-content-center py-3" to={`/tienda`}>
+          <Link className="row justify-content-center py-3 pb-5" to={`/tienda`}>
                 <button className='badge col-7 fs-6 mx-auto boton2'>Seguir comprando</button>
           </Link>
         </div>
@@ -26,6 +27,9 @@ const Cart =()=>{
                 <div className="py-4 d-flex justify-content-center">
                     <button onClick={vaciarCarrito} className="badge fs-6 mx-auto boton2">Vaciar carrito</button>
                 </div>
+                <Link className="py-4 d-flex justify-content-center" to={`/contactform`}>
+                    <button className='badge fs-6 mx-auto boton2'>Proceder al pago</button>
+                </Link>
             </div>
                
       }

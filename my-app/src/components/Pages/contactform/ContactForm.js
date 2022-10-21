@@ -10,8 +10,7 @@ const ContactForm =()=>{
     const [form, setForm] = useState(defaultForm);
     const [id, setId] = useState();
     const {carrito, precioTotal}=useContext(CartContext)
-    // { buyer: { name, phone, email }, items: [{id, title, price}], total  }
-    
+        
     const order = {
 		form,
 		items: carrito.map((product) => ({

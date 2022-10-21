@@ -1,6 +1,6 @@
 {
-  "dependencies": {
-    "firebase": "^9.12.1",
-    "react-bootstrap-icons": "^1.9.1"
-  }
+    "dependencies": {
+        "firebase": "^9.12.1",
+        "react-bootstrap-icons": "^1.9.1"
+    }
 }

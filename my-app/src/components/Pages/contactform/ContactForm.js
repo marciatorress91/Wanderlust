@@ -36,14 +36,14 @@ const ContactForm =()=>{
       });
     };
   
-      
     return (
       <div className="container-fluid itemContainer">
         <h2 className="cart">Datos de pago</h2>
         {id ? (
         <div className="p-5">
-          <div className="container contenedorGracias">
-            <h3 className="gracias p-5">Gracias por realizar tu compra! <i className="bi bi-airplane-fill avion"></i></h3>
+          <div className="container contenedorGracias" >
+            <h3 className="gracias p-5">Gracias por realizar tu compra! <i className="bi bi-airplane-fill avion"></i></h3> 
+            <h3 className="gracias pb-5">Tu número de Orden es: {id}</h3>
           </div>
         </div>
         ) : (

@@ -1,3 +1,16 @@
+# PROYECTO WANDERLUST
+
+Mi nombre es Marcia Torres y este proyecto corresponde a mi trabajo final del curso de React Js de CoderHouse.
+
+El proyecto consiste en una tienda online de artículos de viaje, desde valijas hasta artículos más pequeños como accesorios.
+
+Para poder visualizar el programa, debes descargarlo y ejecutar npm install y luego npm start.
+
+Ojalá te guste mucho :)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
